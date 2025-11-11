@@ -33,17 +33,14 @@ const Education = () => {
                 {edu.degree}
               </h3>
               
-              <div className="space-y-2 text-gray-600 dark:text-gray-400">
+              <div className="space-y-3 text-gray-600 dark:text-gray-400">
                 <p className="font-semibold text-brand-600 dark:text-brand-400">
                   {edu.field && `${edu.field} • `}
                   {edu.board}
                 </p>
                 <p className="font-medium">{edu.institution}</p>
-                <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-800">
-                  <span className="text-sm">{edu.address}</span>
-                  <span className="text-sm font-semibold">{edu.year}</span>
-                </div>
-                <div className="inline-block px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full text-sm font-medium">
+                <p className="text-sm">{edu.address}</p>
+                <div className="inline-block px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full text-sm font-medium mt-2">
                   {edu.percentage}
                 </div>
               </div>

@@ -7,6 +7,7 @@ import useDarkMode from "./hooks/useDarkmode";
 import { useEffect, useRef } from "react";
 import Navbar from "./components/landingPage/navbar";
 import Contact from "./components/landingPage/contact";
+import Footer from "./components/Footer";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
@@ -83,6 +84,7 @@ const App = () => {
   }, []);
 
   return (
+    <>
     <div ref={smoothWrapper} className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
       <Navbar />
       <div ref={smoothContent}>
@@ -99,7 +101,10 @@ const App = () => {
           <Contact />
         </Element>
       </div>
+      <Footer />
     </div>
+    <div id="canvas-portal" />
+    </>
   );
 };
 

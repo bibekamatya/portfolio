@@ -34,7 +34,7 @@ const Navbar = () => {
             className="cursor-pointer group"
           >
             <span className="text-2xl font-display font-bold gradient-text group-hover:scale-105 transition-transform inline-block">
-              Portfolio
+              Bibek
             </span>
           </Link>
 
@@ -60,7 +60,7 @@ const Navbar = () => {
             ))}
             <button
               onClick={toggleDarkMode}
-              className="ml-4 p-2.5 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-brand-100 dark:hover:bg-white/20 transition-all border border-gray-200 dark:border-white/10"
+              className="ml-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10 hover:bg-brand-100 dark:hover:bg-white/20 transition-all border border-gray-200 dark:border-white/10"
             >
               <Icon icon={!isDarkMode ? "sun" : "moon"} className="w-5 h-5 text-brand-600 dark:text-brand-400" />
             </button>
@@ -70,13 +70,13 @@ const Navbar = () => {
           <div className="md:hidden flex items-center gap-3">
             <button
               onClick={toggleDarkMode}
-              className="p-2.5 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-brand-100 dark:hover:bg-white/20 transition-all border border-gray-200 dark:border-white/10"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10 hover:bg-brand-100 dark:hover:bg-white/20 transition-all border border-gray-200 dark:border-white/10"
             >
               <Icon icon={!isDarkMode ? "sun" : "moon"} className="w-5 h-5 text-brand-600 dark:text-brand-400" />
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2.5 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-brand-100 dark:hover:bg-white/20 transition-all border border-gray-200 dark:border-white/10 text-gray-900 dark:text-gray-100"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10 hover:bg-brand-100 dark:hover:bg-white/20 transition-all border border-gray-200 dark:border-white/10 text-gray-900 dark:text-gray-100"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (

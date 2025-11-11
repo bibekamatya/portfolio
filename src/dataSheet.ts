@@ -25,6 +25,11 @@ import eventHome from "./assets/event-home.png";
 import eventCategoryWise from "./assets/event-category-wise.png";
 import eventDetails from "./assets/event-details.png";
 
+import smartAccountDisplay from "./assets/sa-home.png";
+import smartAccountDashboard from "./assets/sa1.png";
+import sa2 from "./assets/sa2.png";
+import sa3 from "./assets/sa3.png";
+
 import Hero from "./components/landingPage/hero";
 import Experiences from "./components/landingPage/experiences";
 import Skills from "./components/landingPage/skills";
@@ -44,7 +49,7 @@ export const EXPERIENCES_DATA = [
     role: "Frontend Developer",
     company: "Clove.IT Pvt. Ltd",
     location: "Biratnagar, Nepal",
-    duration: "Sep 2022 - PRESENT",
+    duration: "Contract Based, Sep 2022 - PRESENT",
     details: [
       "Built and maintained responsive React.js applications.",
       "Collaborated closely with design and backend teams.",
@@ -208,6 +213,56 @@ export const SKILLS_DATA = [
 ];
 
 export const PROJECTS_DATA = [
+  {
+    showDetails: true,
+    title: "Smart Account",
+    type: "Next.js Full-Stack App | Business Management",
+    description:
+      "A comprehensive business management system with multi-business/user/member support, financial tracking, and inventory management.",
+    overview:
+      "Smart Account is a full-stack Next.js application designed for managing multiple businesses with complete financial tracking, team collaboration, and real-time analytics. Built with Next.js 15, React 19, TypeScript, and MongoDB, it provides a robust solution for business owners to manage sales, purchases, payments, and team members efficiently.",
+    coreFeatures: [
+      "Multi-Business Support - Manage multiple businesses from one account with role-based permissions.",
+      "Financial Management - Complete sales, purchase, and payment tracking with supplier/customer management.",
+      "Team Collaboration - Role-based access control with granular permissions for team members.",
+      "Real-time Analytics - Dashboard with live business insights, charts, and performance metrics.",
+      "PWA Support - Installable progressive web app with offline functionality.",
+    ],
+    advancedFeatures: [
+      "Fiscal Year Management - Multiple fiscal year support with data carry-forward.",
+      "Audit Logging - Complete activity tracking and audit trails for all operations.",
+      "Advanced Search - Powerful search and filtering capabilities across all modules.",
+      "Data Export - Excel and CSV export functionality for reports.",
+      "Supplier & Customer Ledger - Complete transaction history and relationship management.",
+    ],
+    technologies: [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "MongoDB",
+      "Mongoose",
+      "Redux Toolkit",
+      "NextAuth.js",
+      "Tailwind CSS",
+      "Server Actions",
+      "JWT Authentication",
+      "Framer Motion",
+      "React Hook Form",
+      "Zod Validation",
+    ],
+    development: {
+      tools: ["Visual Studio Code", "Postman", "Git", "ESLint", "Prettier"],
+      practices: [
+        "Component-based architecture with TypeScript strict mode.",
+        "Redux Toolkit for state management with custom hooks.",
+        "Server Actions for type-safe API operations.",
+        "Comprehensive error handling and audit logging.",
+      ],
+    },
+    displayImage: smartAccountDisplay,
+    images: [smartAccountDisplay, smartAccountDashboard, sa2, sa3],
+    deployedLink: "https://smart-acc.vercel.app/",
+  },
   {
     showDetails: true,
     title: "RoomFinder",
@@ -384,11 +439,11 @@ export const CONTACT_DETAILS = [
   {
     icon: "email",
     title: "Email",
-    content: "amatyahom@gmail.com",
+    content: "bamatya1@gmail.com",
   },
   {
     icon: "phone",
     title: "Phone",
-    content: "+977-9800000000",
+    content: "+977 9816776999",
   },
 ];
