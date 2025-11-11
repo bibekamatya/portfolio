@@ -49,12 +49,12 @@ export const EXPERIENCES_DATA = [
     role: "Frontend Developer",
     company: "Clove.IT Pvt. Ltd",
     location: "Biratnagar, Nepal",
-    duration: "Contract Based, Sep 2022 - PRESENT",
+    duration: "Tasks Based, 2025 - PRESENT",
     details: [
-      "Built and maintained responsive React.js applications.",
-      "Collaborated closely with design and backend teams.",
-      "Optimized application performance for faster load times.",
-      "Implemented best practices for code quality, scalability, and maintainability.",
+      "Developed and maintained modern React.js and Next.js applications for business clients.",
+      "Focused on refactoring legacy UI and improving component reusability across modules.",
+      "Integrated RESTful APIs and state management using Redux Toolkit for seamless user experiences.",
+      "Contributed to code reviews and performance tuning, improving application load times.",
     ],
   },
   {
@@ -67,6 +67,18 @@ export const EXPERIENCES_DATA = [
       "Enhanced existing features and improved user interfaces.",
       "Adapted quickly to changing requirements.",
       "Ensured timely delivery of tasks.",
+    ],
+  },
+  {
+    role: "Frontend Developer",
+    company: "LightBulb Technology Pvt. Ltd",
+    location: "Biratnagar, Nepal",
+    duration: "2022 - 2024",
+    details: [
+      "Led the development of interactive, data-driven dashboards using React.js and TypeScript.",
+      "Collaborated with cross-functional teams to implement complex business logic on the frontend.",
+      "Enhanced app performance with lazy loading, memoization, and dynamic imports.",
+      "Introduced frontend best practices, improving maintainability and developer productivity.",
     ],
   },
   {

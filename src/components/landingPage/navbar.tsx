@@ -12,31 +12,24 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled 
-        ? 'bg-white/95 dark:bg-black/95 backdrop-blur-sm shadow-lg border-b border-gray-200 dark:border-gray-900 py-3' 
-        : 'bg-transparent py-5'
-    }`}>
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 dark:bg-black/95 backdrop-blur-sm shadow-lg border-b border-gray-200 dark:border-gray-900 py-3"
+          : "bg-transparent py-5"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link
-            to="About"
-            spy
-            smooth
-            duration={500}
-            offset={-100}
-            className="cursor-pointer group"
-          >
-            <span className="text-2xl font-display font-bold gradient-text group-hover:scale-105 transition-transform inline-block">
-              Bibek
-            </span>
-          </Link>
+          <div className="text-2xl font-bold text-gray-900 dark:text-white">
+            Portfolio
+          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-1">
@@ -51,8 +44,8 @@ const Navbar = () => {
                 onSetActive={() => setActive(title)}
                 className={`px-4 py-2 rounded-lg font-medium cursor-pointer transition-all duration-200 ${
                   active === title
-                    ? 'bg-brand-600 text-white shadow-lg'
-                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    ? "bg-brand-600 text-white shadow-lg"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
               >
                 {title}
@@ -62,7 +55,10 @@ const Navbar = () => {
               onClick={toggleDarkMode}
               className="ml-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10 hover:bg-brand-100 dark:hover:bg-white/20 transition-all border border-gray-200 dark:border-white/10"
             >
-              <Icon icon={!isDarkMode ? "sun" : "moon"} className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+              <Icon
+                icon={!isDarkMode ? "sun" : "moon"}
+                className="w-5 h-5 text-brand-600 dark:text-brand-400"
+              />
             </button>
           </div>
 
@@ -72,17 +68,35 @@ const Navbar = () => {
               onClick={toggleDarkMode}
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10 hover:bg-brand-100 dark:hover:bg-white/20 transition-all border border-gray-200 dark:border-white/10"
             >
-              <Icon icon={!isDarkMode ? "sun" : "moon"} className="w-5 h-5 text-brand-600 dark:text-brand-400" />
+              <Icon
+                icon={!isDarkMode ? "sun" : "moon"}
+                className="w-5 h-5 text-brand-600 dark:text-brand-400"
+              />
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/10 hover:bg-brand-100 dark:hover:bg-white/20 transition-all border border-gray-200 dark:border-white/10 text-gray-900 dark:text-gray-100"
             >
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
                 {isMobileMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 )}
               </svg>
             </button>
@@ -104,8 +118,8 @@ const Navbar = () => {
                 onSetActive={() => setActive(title)}
                 className={`block px-4 py-3 rounded-lg font-medium cursor-pointer transition-all ${
                   active === title
-                    ? 'bg-brand-600 text-white'
-                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                    ? "bg-brand-600 text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
               >
                 {title}

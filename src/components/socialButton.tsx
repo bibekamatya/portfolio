@@ -4,7 +4,7 @@ const socialLinks = [
   { icon: "github", url: "https://github.com/bibekamatya", title: "GitHub" },
   {
     icon: "linkedIn",
-    url: "https://www.linkedin.com/in/hom-narayan-amatya/",
+    url: "https://www.linkedin.com/in/hom-narayan-amatya-3a6705377",
     title: "LinkedIn",
   },
 ];
@@ -23,10 +23,10 @@ const SocialButtons = () => {
     <div className="flex flex-wrap gap-4 items-center">
       <button
         onClick={handleResumeClick}
-        className="px-6 py-3 bg-brand-600 hover:bg-brand-700 text-white rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-200 flex items-center gap-2"
+        className="px-6 py-3 bg-gray-900 dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-100 text-white dark:text-gray-900 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2"
       >
         <Icon icon="fileDownload" className="w-5 h-5" />
-        Download Resume
+        Resume
       </button>
       {socialLinks.map((link, index) => (
         <a
