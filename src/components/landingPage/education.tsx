@@ -5,75 +5,53 @@ import Icon from "../Icons";
 
 const Education = () => {
   return (
-    <>
+    <div className="relative">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+      </div>
+      
       <Header header="Education" />
-      <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-6 relative z-10">
         {EDUCATION_DATA.map((edu, idx) => (
           <motion.div
             key={idx}
-            className="relative"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.4, delay: idx * 0.1 }}
+            className="group"
           >
-            {/* Card Content */}
-            <div className="p-4 rounded-lg h-full custom-shadow border-b border-themeColor flex flex-col items-center gap-2">
-              <div className="flex items-center justify-center h-14 w-14 border-2 border-themeColor rounded-full mb-4">
-                <Icon
-                  icon="graduationCap"
-                  className="h-8 w-8 text-themeColor"
-                />
+            <div className="relative p-8 rounded-2xl h-full bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-brand-500 dark:hover:border-brand-500 shadow-lg hover:shadow-2xl transition-all duration-300 backdrop-blur-sm">
+              {/* Icon */}
+              <div className="flex items-center justify-center h-16 w-16 bg-brand-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Icon icon="graduationCap" className="h-8 w-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-themeColor">
+              
+              {/* Content */}
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                 {edu.degree}
               </h3>
-              <div className="dark:text-gray-400 text-gray-500 text-center">
-                <p>
-                  {edu.field && `${edu.field} | `}
-                  {edu.board} | {edu.percentage}
+              
+              <div className="space-y-2 text-gray-600 dark:text-gray-400">
+                <p className="font-semibold text-brand-600 dark:text-brand-400">
+                  {edu.field && `${edu.field} • `}
+                  {edu.board}
                 </p>
-                <p>{edu.institution}</p>
-                <p className="text-sm dark:text-gray-500 text-gray-400 mt-1">
-                  {edu.address} {edu.year}
-                </p>
+                <p className="font-medium">{edu.institution}</p>
+                <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-800">
+                  <span className="text-sm">{edu.address}</span>
+                  <span className="text-sm font-semibold">{edu.year}</span>
+                </div>
+                <div className="inline-block px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-full text-sm font-medium">
+                  {edu.percentage}
+                </div>
               </div>
             </div>
           </motion.div>
         ))}
       </div>
-
-      {/* <div className="grid md:grid-cols-3 grid-cols-1 gap-10 mt-40">
-        {educationData.map((edu, idx) => (
-          <motion.div
-            key={idx}
-            className="relative"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-            whileHover={{ scale: 1.05 }}
-          >
-            <GlowingCard>
-              <Icon
-                icon="graduationCap"
-                className="h-8 w-8 text-themeColor mb-5"
-              />
-              <h3 className="text-xl font-semibold text-themeColor">
-                {edu.degree}
-              </h3>
-              <p className=" text-gray-400">
-                {edu.field && `${edu.field} | `}
-                {edu.board} | {edu.percentage}
-              </p>
-              <p className="text-gray-400 mt-2">{edu.institution}</p>
-              <p className="text-sm text-gray-500">
-                {edu.address} {edu.year}
-              </p>
-            </GlowingCard>
-          </motion.div>
-        ))}
-      </div> */}
-    </>
+    </div>
   );
 };
 

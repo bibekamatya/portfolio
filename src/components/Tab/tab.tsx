@@ -27,8 +27,8 @@ const Tab = ({ categories }: TabbedContentProps) => {
 
   return (
     <div>
-      <div className="relative flex justify-center mb-8">
-        <div className="relative z-10 flex space-x-4 w-full justify-center">
+      <div className="flex justify-center mb-12">
+        <div className="inline-flex flex-wrap gap-3 p-2 bg-gray-100 dark:bg-gray-950 rounded-2xl border border-transparent dark:border-gray-800">
           {categories.map((category, index) => (
             <TabButton
               key={index}
@@ -41,8 +41,7 @@ const Tab = ({ categories }: TabbedContentProps) => {
         </div>
       </div>
 
-      {/* Wrapping TabContent with swipe handlers */}
-      <div {...handlers} className="space-y-8">
+      <div {...handlers}>
         <TabContent category={categories[activeTab]} activeTab={activeTab} />
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Icon from "./../Icons";
 import { Header } from "./../header";
 import { CONTACT_DETAILS } from "../../dataSheet";
@@ -28,7 +29,7 @@ const Contact = () => {
     setStatus("loading");
 
     try {
-      const response = await fetch("https://formspree.io/f/mjkbajbl", {
+      const response = await fetch("https://formspree.io/f/xblqjokv", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,44 +50,57 @@ const Contact = () => {
   };
 
   return (
-    <div className="dark:bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 lg:py-20">
-      <Header header="Contact" />
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-10">
-          <div>
-            <h2 className="font-heading font-bold tracking-tight text-3xl sm:text-5xl mb-6 text-themeColor">
-              Get in Touch
-            </h2>
-            <p className="mt-3 mb-8 text dark:text-gray-300 text-gray-600">
-              Whether you have a question, want to start a project, or simply
-              want to connect, feel free to reach out. Let's collaborate and
-              create something amazing together!
-            </p>
-            <ul className="space-y-6">
+    <div className="bg-gray-50 dark:bg-black py-16 lg:py-20 relative overflow-hidden">
+      {/* Cinematic background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/5 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <Header header="Get In Touch" />
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Left Side - Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-8"
+          >
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Let's work together
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+              </p>
+            </div>
+            
+            <div className="space-y-6">
               {CONTACT_DETAILS.map(({ icon, title, content }) => (
-                <li key={title} className="flex items-center">
-                  <div className="h-10 w-10 flex items-center justify-center bg-transparent border-2 border-themeColor rounded-full p-2 cursor-pointer transition-all duration-300">
-                    <Icon
-                      icon={icon}
-                      className="h-5 w-5 text-themeColor group-hover:text-gray-300 transition-all duration-300 transform hover:scale-110"
-                    />
+                <div key={title} className="flex items-start gap-4 group">
+                  <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center bg-brand-600 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <Icon icon={icon} className="h-6 w-6 text-white" />
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-themeColor">
+                  <div>
+                    <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
                       {title}
-                    </h3>
-                    <p className="dark:text-gray-300 text-gray-500">
+                    </h4>
+                    <p className="text-lg font-medium text-gray-900 dark:text-white">
                       {content}
                     </p>
                   </div>
-                </li>
+                </div>
               ))}
-            </ul>
-          </div>
-          <div className="dark:bg-gray-800 bg-white lg:p-8 p-4 rounded-lg shadow-lg">
-            <h2 className="mb-4 lg:text-2xl xl font-bold dark:text-gray-100 text-themeColor">
-              Let's Begin Our Journey Together
-            </h2>
+            </div>
+          </motion.div>
+
+          {/* Right Side - Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="bg-white dark:bg-white/5 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-white/10 backdrop-blur-sm"
+          >
             <form id="contactForm" onSubmit={handleSubmit}>
               <div className="space-y-4">
                 <div>
@@ -98,7 +112,7 @@ const Contact = () => {
                     id="name"
                     autoComplete="given-name"
                     placeholder="Your name"
-                    className="w-full rounded-md border border-gray-600 dark:bg-gray-700 py-3 px-4 text-white placeholder-gray-400"
+                    className="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -114,7 +128,7 @@ const Contact = () => {
                     id="email"
                     autoComplete="email"
                     placeholder="Your email address"
-                    className="w-full rounded-md border border-gray-600 dark:bg-gray-700 py-3 px-4 text-white placeholder-gray-400"
+                    className="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -128,35 +142,40 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    placeholder="Write your message..."
-                    className="w-full rounded-md border border-gray-600 dark:bg-gray-700 py-3 px-4 text-white placeholder-gray-400"
+                    placeholder="Tell me about your project..."
+                    rows={5}
+                    className="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all resize-none"
                     value={formData.message}
                     onChange={handleChange}
                     required
                   ></textarea>
                 </div>
               </div>
-              <div className="text-center mt-6">
+              <div className="mt-6">
                 <button
                   type="submit"
-                  className="w-full bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-full transition ease-in-out duration-300"
+                  className="w-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                   disabled={status === "loading"}
                 >
                   {status === "loading" ? "Sending..." : "Send Message"}
                 </button>
                 {status === "success" && (
-                  <p className="mt-4 text-green-500">
-                    Your message was sent successfully!
-                  </p>
+                  <div className="mt-4 p-4 bg-green-100 dark:bg-green-900/30 border border-green-500 rounded-xl">
+                    <p className="text-green-700 dark:text-green-400 font-medium text-center">
+                      ✓ Message sent successfully!
+                    </p>
+                  </div>
                 )}
                 {status === "error" && (
-                  <p className="mt-4 text-red-500">
-                    Something went wrong. Please try again.
-                  </p>
+                  <div className="mt-4 p-4 bg-red-100 dark:bg-red-900/30 border border-red-500 rounded-xl">
+                    <p className="text-red-700 dark:text-red-400 font-medium text-center">
+                      ✗ Something went wrong. Please try again.
+                    </p>
+                  </div>
                 )}
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

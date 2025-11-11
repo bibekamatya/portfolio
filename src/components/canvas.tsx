@@ -37,10 +37,9 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
 
   return (
     <>
-      {/* Background overlay when the off-canvas is open */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
           onClick={() => {
             toggleCanvas();
             setIsViewerOpen(false);
@@ -50,34 +49,29 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
 
       {/* Off-canvas panel */}
       <div
-        className={`fixed left-0 top-0 bottom-0 w-full xl:max-w-5xl md:max-w-3xl bg-white dark:bg-darkBlue shadow-lg z-50 overflow-y-auto transform ${
+        className={`fixed left-0 top-0 bottom-0 w-full xl:max-w-5xl md:max-w-3xl bg-white dark:bg-black shadow-2xl z-50 overflow-y-auto transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
         {/* Close button */}
         <button
-          className="absolute top-4 right-4 text-gray-700 dark:text-gray-300"
+          className="absolute top-4 right-4 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full"
           onClick={toggleCanvas}
         >
           <FontAwesomeIcon icon={faTimes} size="lg" />
         </button>
 
-        {/* Content */}
-        <div className="p-6 text-gray-800">
-          {/* Project Title */}
-          <h2 className="text-3xl font-bold mb-2 text-themeColor">
+        <div className="p-6">
+          <h2 className="text-3xl font-bold mb-2 gradient-text">
             {project.title}
           </h2>
-          {/* Project Type */}
-          <p className="text-sm text-gray-700 dark:text-gray-200 mb-4">
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
             {project.type}
           </p>
-          {/* Project Description */}
-          <p className="text-base mb-4 dark:text-gray-300">
+          <p className="text-base mb-6 text-gray-700 dark:text-gray-300 leading-relaxed">
             {project.overview}
           </p>
 
-          {/* Core Features */}
           {project.coreFeatures && (
             <ListWithTitle
               title="Core Features:"
@@ -85,7 +79,6 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
             />
           )}
 
-          {/* Advanced Features */}
           {project.advancedFeatures && (
             <ListWithTitle
               title="Advanced Features:"
@@ -93,15 +86,14 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
             />
           )}
 
-          {/* Technologies */}
-          <h3 className="text-xl font-semibold mb-2 text-themeColor">
+          <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
             Technologies Used:
           </h3>
           <div className="flex flex-wrap gap-2 mb-4">
             {project?.technologies.map((tech, index) => (
               <span
                 key={index}
-                className="bg-gray-200 dark:bg-lightBlue dark:text-gray-300 text-gray-700 px-3 py-1 rounded-full text-sm"
+                className="bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 px-3 py-1.5 rounded-lg text-sm font-medium border border-brand-200 dark:border-brand-800"
               >
                 {tech}
               </span>
@@ -124,10 +116,9 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
             </>
           )}
 
-          {/* Image Gallery */}
           {project.images.length > 0 && (
             <>
-              <h3 className="text-xl font-semibold mb-2 text-themeColor">
+              <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
                 Project Images:
               </h3>
               <div className="flex space-x-4 mb-4 w-full overflow-x-auto pt-3">
@@ -150,9 +141,9 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
               href={project.deployedLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 bg-themeColor text-white px-4 py-2 text-sm rounded-md ml-auto flex w-fit"
+              className="mt-4 bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 text-sm font-semibold rounded-lg ml-auto flex w-fit transition-all duration-300 shadow-lg"
             >
-              Visit Project
+              Visit Project →
             </a>
           )}
         </div>

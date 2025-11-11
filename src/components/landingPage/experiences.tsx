@@ -1,111 +1,66 @@
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+import { motion } from "framer-motion";
 import { EXPERIENCES_DATA } from "../../dataSheet";
 import { Header } from "../header";
-import Icon from "../Icons";
 
 const Experiences = () => {
   return (
-    <>
-      <Header header="Experiences" />
-      <VerticalTimeline>
+    <div className="relative">
+      <Header header="Work Experience" />
+      
+      <div className="space-y-8">
         {EXPERIENCES_DATA.map((exp, index) => (
-          <VerticalTimelineElement
+          <motion.div
             key={index}
-            contentStyle={{
-              background: "var(--card-bg-color)", // Using the CSS variable
-              color: "var(--text-color)", // Using the CSS variable
-              borderBottom: `1px solid var(--theme-color)`, // Using the CSS variable
-              boxShadow: "var(--custom-shadow)",
-              borderRadius: ".5rem",
-            }}
-            contentArrowStyle={{
-              borderRight: `10px solid var(--arrow-color)`, // Using the CSS variable
-              marginTop: "2px",
-            }}
-            iconStyle={{ backgroundColor: "var(--theme-color)" }}
-            // @ts-ignore
-            date={
-              <span className="items-center">
-                <Icon icon="calendar" className="mr-2" />
-                {exp.duration}
-              </span>
-            }
-            iconClassName="mt-6 xl:!-ml-[8px] !ml-[11px] !h-4 !w-4"
-            dateClassName="text-themeColor !opacity-100"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="group relative"
           >
-            <div className="space-y-1 mb-5">
-              <h3 className="text-xl font-semibold text-themeColor">
-                {exp.role}
-              </h3>
-              <h6 className="dark:text-gray-300 text-gray-700 dark:font-normal font-semibold">
-                {exp.company}, {exp.location}
-              </h6>
-            </div>
-            <ul className="list-disc pl-6 space-y-2">
-              {exp.details.map((detail, idx) => (
-                <li
-                  key={idx}
-                  className="dark:text-gray-400 text-gray-700 text-sm"
-                >
-                  {detail}
-                </li>
-              ))}
-            </ul>
-          </VerticalTimelineElement>
-        ))}
-      </VerticalTimeline>
-      {/* 
-      <div className="mt-40">
-        <Header header="Experiences" />
-        <div className="space-y-4">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={index}
-              className="py-3 px-6 rounded-lg relative shadow shadow-sky-900"
-              onMouseEnter={() => setIsHovered(index)}
-              onMouseLeave={() => setIsHovered(null)}
-              ref={(element) => (refs.current[index] = element)}
-              animate={{
-                height: isHovered === index ? "auto" : "80px",
-                minHeight: isHovered === index ? "200px" : "80px",
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+            {/* Timeline dot */}
+            <div className="absolute left-0 top-8 w-3 h-3 bg-brand-600 rounded-full shadow-lg"></div>
+            <div className="absolute left-[5px] top-12 bottom-0 w-0.5 bg-brand-600/30"></div>
+            
+            {/* Content */}
+            <div className="ml-8 p-6 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl hover:border-brand-500 dark:hover:border-brand-500 transition-all duration-300 backdrop-blur-sm shadow-sm hover:shadow-lg">
+              {/* Header */}
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-4">
                 <div>
-                  <h3 className={`text-xl font-semibold text-themeColor`}>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
                     {exp.role}
                   </h3>
-                  <p className="text-gray-300">
-                    {exp.company}, {exp.location}
+                  <p className="text-lg font-semibold text-brand-600 dark:text-brand-400">
+                    {exp.company}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {exp.location}
                   </p>
                 </div>
-                <span className="text-gray-400 text-sm mt-2 md:mt-0 flex items-center">
-                  <Icon icon="calendar" className="mr-2" />
+                <div className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-white/5 px-4 py-2 rounded-full w-fit">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
                   {exp.duration}
-                </span>
+                </div>
               </div>
-              <motion.ul
-                className="list-disc pl-6 space-y-2"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: isHovered === index ? 1 : 0 }} // Animate list items based on hover
-                transition={{ duration: 0.3 }}
-              >
+
+              {/* Details */}
+              <ul className="space-y-2">
                 {exp.details.map((detail, idx) => (
-                  <li key={idx} className="text-gray-400 text-sm">
-                    {detail}
+                  <li
+                    key={idx}
+                    className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
+                  >
+                    <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-brand-500 mt-2"></span>
+                    <span className="text-sm leading-relaxed">{detail}</span>
                   </li>
                 ))}
-              </motion.ul>
-            </motion.div>
-          ))}
-        </div>
-      </div> */}
-    </>
+              </ul>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
   );
 };
 

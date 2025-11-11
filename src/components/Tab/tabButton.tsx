@@ -4,25 +4,24 @@ import Icon from "../Icons";
 
 const TabButton = ({ isActive, onClick, icon, title }: TabButtonProps) => {
   return (
-    <div className="md:flex-none flex w-full md:w-fit">
-      <button
-        onClick={onClick}
-        className={`relative rounded-full font-medium dark:font-normal transition
-        ${isActive ? "text-themeColor dark:text-themeColor" : "dark:md:text-gray-400 text-themeColor"}
-        px-3 py-1.5
-        flex items-center gap-2 justify-between`}
-      >
-        {isActive && (
-          <motion.span
-            layoutId="bubble"
-            className="absolute inset-0 border-themeColor dark:border-themeColor border shadow-lg rounded-full bg-gray-200 dark:bg-transparent mix-blend-color-burn"
-            transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-          />
-        )}
-        <Icon icon={icon} className="h-5 w-5" />
-        <span className="text-base hidden md:block">{title}</span>
-      </button>
-    </div>
+    <button
+      onClick={onClick}
+      className={`relative px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-3 ${
+        isActive
+          ? "text-white shadow-lg scale-105"
+          : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-900"
+      }`}
+    >
+      {isActive && (
+        <motion.span
+          layoutId="activeTab"
+          className="absolute inset-0 bg-gradient-to-r from-brand-500 to-accent-500 rounded-xl"
+          transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+        />
+      )}
+      <Icon icon={icon} className="h-6 w-6 relative z-10" />
+      <span className="text-sm md:text-base font-medium relative z-10 hidden sm:block">{title}</span>
+    </button>
   );
 };
 

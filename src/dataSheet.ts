@@ -177,6 +177,7 @@ export const SKILLS_DATA = [
     icon: "setting",
     items: [
       { title: "Next.js", icon: "react" },
+      { title: "React.js", icon: "react" },
       { title: "MERN", icon: "nodejs" },
       { title: "Redux", icon: "redux" },
       { title: "Redux Thunk", icon: "redux" },

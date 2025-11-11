@@ -14,15 +14,15 @@ const ListWithTitle: React.FC<ListWithTitleProps> = ({
   icon = "arrowRight",
 }) => {
   return (
-    <div>
-      <h3 className="text-xl font-semibold mb-2 text-themeColor">{title}</h3>
-      <ul className="list-disc list-inside mb-4">
+    <div className="mb-6">
+      <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{title}</h3>
+      <ul className="space-y-2">
         {items.map((item, index) => (
           <li
             key={index}
-            className="mb-2 text-sm leading-relaxed flex items-start dark:text-gray-200 text-gray-700"
+            className="flex items-start gap-2 text-sm leading-relaxed text-gray-700 dark:text-gray-300"
           >
-            {icon && <Icon icon={icon} className="mr-2 mt-1" />}
+            {icon && <Icon icon={icon} className="mt-1 flex-shrink-0 text-brand-600 dark:text-brand-400" />}
             <span>{item}</span>
           </li>
         ))}
