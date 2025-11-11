@@ -88,15 +88,13 @@ const App = () => {
     <div ref={smoothWrapper} className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
       <Navbar />
       <div ref={smoothContent}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-          {Sections.map(({ title, Component }) => (
-            <div key={title}>
-              {Component && (
-                <Section key={title} title={title} component={<Component />} />
-              )}
-            </div>
-          ))}
-        </div>
+        {Sections.map(({ title, Component }, index) => (
+          <div key={title} className={index === 0 ? "w-full pt-4" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"}>
+            {Component && (
+              <Section key={title} title={title} component={<Component />} />
+            )}
+          </div>
+        ))}
         <Element name="Contact" className="section">
           <Contact />
         </Element>

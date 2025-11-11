@@ -126,10 +126,26 @@ const Projects = () => {
               </motion.div>
             </div>
 
-            {/* Bottom Label */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4 transform translate-y-0 group-hover:translate-y-full transition-transform duration-500">
+            {/* Bottom Label - Desktop */}
+            <div className="hidden md:block absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-4 transform translate-y-0 group-hover:translate-y-full transition-transform duration-500">
               <h3 className="text-white font-bold text-lg">{project.title}</h3>
               <p className="text-gray-300 text-sm">{project.type}</p>
+            </div>
+
+            {/* Project Info Card - Mobile */}
+            <div className="md:hidden p-5 bg-white dark:bg-gray-900">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{project.title}</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3 line-clamp-2">{project.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.slice(0, 3).map((tech, i) => (
+                  <span key={i} className="text-xs px-2 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 rounded-md">
+                    {tech}
+                  </span>
+                ))}
+                {project.technologies.length > 3 && (
+                  <span className="text-xs px-2 py-1 text-gray-500 dark:text-gray-400">+{project.technologies.length - 3}</span>
+                )}
+              </div>
             </div>
           </motion.div>
         ))}
