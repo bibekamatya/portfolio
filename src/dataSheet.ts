@@ -70,17 +70,17 @@ export const EXPERIENCES_DATA = [
     ],
   },
   {
-    role: "Frontend Developer",
-    company: "LightBulb Technology Pvt. Ltd",
-    location: "Biratnagar, Nepal",
-    duration: "2022 - 2024",
-    details: [
-      "Led the development of interactive, data-driven dashboards using React.js and TypeScript.",
-      "Collaborated with cross-functional teams to implement complex business logic on the frontend.",
-      "Enhanced app performance with lazy loading, memoization, and dynamic imports.",
-      "Introduced frontend best practices, improving maintainability and developer productivity.",
-    ],
-  },
+  role: "Frontend Developer",
+  company: "LightBulb Technology Pvt. Ltd",
+  location: "Biratnagar, Nepal",
+  duration: "2022 - 2024",
+  details: [
+    "Worked on building interactive, data-driven dashboards using React.js and TypeScript.",
+    "Collaborated with senior developers, designers, and backend teams to implement business requirements on the frontend.",
+    "Assisted in improving application performance using techniques such as lazy loading and component optimization.",
+    "Followed frontend best practices to maintain clean, reusable, and maintainable code."
+  ],
+},
   {
     role: "Jr. Frontend Developer",
     company: "CodAvatar Tech Pvt. Ltd",
