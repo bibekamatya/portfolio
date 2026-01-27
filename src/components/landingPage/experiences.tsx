@@ -6,7 +6,7 @@ const Experiences = () => {
   return (
     <div className="relative">
       <Header header="Work Experience" />
-      
+
       <div className="space-y-8">
         {EXPERIENCES_DATA.map((exp, index) => (
           <motion.div
@@ -20,7 +20,7 @@ const Experiences = () => {
             {/* Timeline dot */}
             <div className="absolute left-0 top-8 w-3 h-3 bg-brand-600 rounded-full shadow-lg"></div>
             <div className="absolute left-[5px] top-12 bottom-0 w-0.5 bg-brand-600/30"></div>
-            
+
             {/* Content */}
             <div className="ml-8 p-6 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl hover:border-brand-500 dark:hover:border-brand-500 transition-all duration-300 backdrop-blur-sm shadow-sm hover:shadow-lg">
               {/* Header */}
@@ -37,8 +37,18 @@ const Experiences = () => {
                   </p>
                 </div>
                 <div className="flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-white/5 px-4 py-2 rounded-full w-fit">
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
                   </svg>
                   {exp.duration}
                 </div>

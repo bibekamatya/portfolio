@@ -21,7 +21,7 @@ const TabContent = ({ category, activeTab }: TabContentProps) => {
           {category.title}
         </h3>
       </div>
-      
+
       <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4">
         {category.items.map((item, idx) => (
           <TabContentInfoCard

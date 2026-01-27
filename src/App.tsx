@@ -8,11 +8,6 @@ import { useEffect, useRef } from "react";
 import Navbar from "./components/landingPage/navbar";
 import Contact from "./components/landingPage/contact";
 import Footer from "./components/Footer";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const Section = ({ title, component }: SectionProps) => (
   <Element name={title} className="section lg:pb-32 pb-20">

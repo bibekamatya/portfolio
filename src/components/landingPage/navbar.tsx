@@ -27,8 +27,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gray-900 dark:text-white">
-            Portfolio
+          <div className="text-2xl font-bold">
+            <span className="text-gray-900 dark:text-white">HN</span>
+            <span className="text-brand-600 dark:text-brand-400">.</span>
           </div>
 
           {/* Desktop Menu */}

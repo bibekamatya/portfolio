@@ -118,8 +118,9 @@ const Hero = () => {
                   transition={{ delay: 0.7, duration: 0.5 }}
                   className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed"
                 >
-                  Crafting pixel-perfect, high-performance web experiences with
-                  React.js and modern technologies.
+                  3+ years building scalable web applications with React.js,
+                  Next.js, and TypeScript. Specialized in performance
+                  optimization and modern UI/UX.
                 </motion.p>
 
                 {/* Location & Tech Stack */}
@@ -181,7 +182,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.3, duration: 0.5 }}
-                className="flex gap-4 sm:gap-8 pt-4"
+                className="grid grid-cols-2 sm:flex gap-4 sm:gap-8 pt-4"
               >
                 <div>
                   <div className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
@@ -201,10 +202,18 @@ const Hero = () => {
                 </div>
                 <div>
                   <div className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-                    5+
+                    6
                   </div>
                   <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                     Companies
+                  </div>
+                </div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+                    React
+                  </div>
+                  <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+                    Specialist
                   </div>
                 </div>
               </motion.div>

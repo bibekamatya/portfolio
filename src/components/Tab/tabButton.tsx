@@ -20,7 +20,9 @@ const TabButton = ({ isActive, onClick, icon, title }: TabButtonProps) => {
         />
       )}
       <Icon icon={icon} className="h-6 w-6 relative z-10" />
-      <span className="text-sm md:text-base font-medium relative z-10 hidden sm:block">{title}</span>
+      <span className="text-sm md:text-base font-medium relative z-10 hidden sm:block">
+        {title}
+      </span>
     </button>
   );
 };

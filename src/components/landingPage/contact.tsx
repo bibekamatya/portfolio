@@ -55,9 +55,9 @@ const Contact = () => {
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/5 rounded-full blur-3xl"></div>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <Header header="Get In Touch" />
+        <Header header="Get In Touch" />
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Left Side - Info */}
           <motion.div
@@ -71,10 +71,11 @@ const Contact = () => {
                 Let's work together
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+                Have a project in mind? Let's discuss how we can work together
+                to bring your ideas to life.
               </p>
             </div>
-            
+
             <div className="space-y-6">
               {CONTACT_DETAILS.map(({ icon, title, content }) => (
                 <div key={title} className="flex items-start gap-4 group">

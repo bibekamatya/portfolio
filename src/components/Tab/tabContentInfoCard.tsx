@@ -21,7 +21,9 @@ const TabContentInfoCard = ({
         <div className="p-4 bg-gradient-to-br from-brand-500 to-accent-500 rounded-xl group-hover:scale-110 transition-transform duration-300 shadow-lg">
           <Icon icon={icon} className="h-8 w-8 text-white" />
         </div>
-        <span className="text-gray-900 dark:text-white text-sm text-center font-semibold">{title}</span>
+        <span className="text-gray-900 dark:text-white text-sm text-center font-semibold">
+          {title}
+        </span>
       </motion.div>
     </>
   );

@@ -9,9 +9,12 @@ const Education = () => {
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div
+          className="absolute bottom-0 right-1/4 w-64 h-64 bg-accent-500/20 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        ></div>
       </div>
-      
+
       <Header header="Education" />
       <div className="grid md:grid-cols-3 grid-cols-1 gap-6 relative z-10">
         {EDUCATION_DATA.map((edu, idx) => (
@@ -27,12 +30,12 @@ const Education = () => {
               <div className="flex items-center justify-center h-16 w-16 bg-brand-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Icon icon="graduationCap" className="h-8 w-8 text-white" />
               </div>
-              
+
               {/* Content */}
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                 {edu.degree}
               </h3>
-              
+
               <div className="space-y-3 text-gray-600 dark:text-gray-400">
                 <p className="font-semibold text-brand-600 dark:text-brand-400">
                   {edu.field && `${edu.field} • `}

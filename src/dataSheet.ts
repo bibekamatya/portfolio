@@ -1,22 +1,12 @@
 import Projects from "./components/landingPage/projects";
-import xoopcall from "./assets/xoopcall.png";
+
+import calendar1 from "./assets/calendar1.png";
+import calendar from "./assets/calendar.png";
+
+import xpenza from "./assets/xpenza.png";
+import xpenza1 from "./assets/xpenza1.png";
 
 import healt1 from "./assets/health1.png";
-
-import rfDashboard from "./assets/rf-dashboard.png";
-import rfHome from "./assets/rf-home.png";
-import rfDisplay from "./assets/rf-display.png";
-import rfDetails from "./assets/rf-details.png";
-import rfList from "./assets/rf-list.png";
-
-import outinvoice1 from "./assets/outinvoice-1.png";
-import outinvoice2 from "./assets/outinvoice-2.png";
-
-import merrimentDisplay from "./assets/merriment-display.png";
-import merrimentHome from "./assets/merriment-home.png";
-import merrimentPlaceDetail from "./assets/merriment-place-detail.png";
-import merrimentBlogs from "./assets/merriment-blogs.png";
-import merrimentBlogDetails from "./assets/merriment-blog-details.png";
 
 import eventForm from "./assets/event-form.png";
 import eventDashboard from "./assets/event-dashboard.png";
@@ -27,8 +17,15 @@ import eventDetails from "./assets/event-details.png";
 
 import smartAccountDisplay from "./assets/sa-home.png";
 import smartAccountDashboard from "./assets/sa1.png";
+import saDashboard from "./assets/sa-dashboard.png";
 import sa2 from "./assets/sa2.png";
 import sa3 from "./assets/sa3.png";
+
+import merrimentDisplay from "./assets/merriment-display.png";
+import merrimentHome from "./assets/merriment-home.png";
+import merrimentPlaceDetail from "./assets/merriment-place-detail.png";
+import merrimentBlogs from "./assets/merriment-blogs.png";
+import merrimentBlogDetails from "./assets/merriment-blog-details.png";
 
 import Hero from "./components/landingPage/hero";
 import Experiences from "./components/landingPage/experiences";
@@ -51,10 +48,10 @@ export const EXPERIENCES_DATA = [
     location: "Biratnagar, Nepal",
     duration: "Tasks Based, 2025 - PRESENT",
     details: [
-      "Developed and maintained modern React.js and Next.js applications for business clients.",
-      "Focused on refactoring legacy UI and improving component reusability across modules.",
-      "Integrated RESTful APIs and state management using Redux Toolkit for seamless user experiences.",
-      "Contributed to code reviews and performance tuning, improving application load times.",
+      "Built and maintained React.js and Next.js applications for business clients.",
+      "Improved legacy UI components for better reusability.",
+      "Integrated REST APIs and managed state using Redux Toolkit.",
+      "Reviewed code and optimized performance to reduce load times.",
     ],
   },
   {
@@ -63,33 +60,32 @@ export const EXPERIENCES_DATA = [
     location: "Nepal",
     duration: "Part time, Tasks based, 2024",
     details: [
-      "Developed and maintained React.js applications.",
-      "Enhanced existing features and improved user interfaces.",
-      "Adapted quickly to changing requirements.",
-      "Ensured timely delivery of tasks.",
+      "Built UI features and custom components using React.js.",
+      "Worked with design team to improve user experience.",
+      "Fixed bugs and improved responsive layouts.",
     ],
   },
   {
-  role: "Frontend Developer",
-  company: "LightBulb Technology Pvt. Ltd",
-  location: "Biratnagar, Nepal",
-  duration: "2022 - 2024",
-  details: [
-    "Worked on building interactive, data-driven dashboards using React.js and TypeScript.",
-    "Collaborated with senior developers, designers, and backend teams to implement business requirements on the frontend.",
-    "Assisted in improving application performance using techniques such as lazy loading and component optimization.",
-    "Followed frontend best practices to maintain clean, reusable, and maintainable code."
-  ],
-},
+    role: "Frontend Developer",
+    company: "LightBulb Technology Pvt. Ltd",
+    location: "Biratnagar, Nepal",
+    duration: "2022 - 2024",
+    details: [
+      "Learned React.js and TypeScript while building dashboards.",
+      "Worked with designers and backend teams on UI features.",
+      "Improved performance using lazy loading and optimization.",
+      "Followed best practices for clean code.",
+    ],
+  },
   {
     role: "Jr. Frontend Developer",
     company: "CodAvatar Tech Pvt. Ltd",
     location: "Kathmandu, Nepal",
     duration: "June 2022 - Sep 2022",
     details: [
-      "Assisted in maintaining dynamic, responsive web applications using React.js.",
-      "Supported senior developers in implementing new features.",
-      "Gained hands-on experience in modern front-end development practices.",
+      "Learned React.js basics while maintaining web applications.",
+      "Helped senior developers with feature implementation.",
+      "Gained experience in frontend development.",
     ],
   },
   {
@@ -227,6 +223,49 @@ export const SKILLS_DATA = [
 export const PROJECTS_DATA = [
   {
     showDetails: true,
+    title: "BS-AD Calendar",
+    type: "React NPM Package | Open Source",
+    description:
+      "A modern React calendar component for seamless conversion between Bikram Sambat (BS) and Gregorian (AD) calendars.",
+    overview:
+      "Published NPM package with 1.2k+ downloads. Provides dual calendar conversion, date range selection, and Nepali localization. Built with TypeScript for type safety and includes comprehensive documentation.",
+    coreFeatures: [
+      "Automatic dual calendar conversion (BS ↔ AD) with single click.",
+      "Single date and range selection with customizable presets.",
+      "Nepali localization support (months, days, numbers).",
+      "TypeScript support with full type definitions.",
+      "Keyboard navigation and ARIA accessibility.",
+    ],
+    advancedFeatures: [
+      "DatePicker component with popup calendar.",
+      "Custom themes (light/dark) and color schemes.",
+      "Range presets (last 7 days, this month, etc.).",
+      "Date constraints (min/max dates).",
+      "Responsive design for all devices.",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "NPM Package",
+      "GitHub Pages",
+    ],
+    development: {
+      tools: ["Vite", "TypeScript", "ESLint", "Prettier", "GitHub Actions"],
+      practices: [
+        "Published to NPM with semantic versioning.",
+        "Comprehensive documentation and examples.",
+        "Unit tests and CI/CD pipeline.",
+        "Open source with MIT license.",
+      ],
+    },
+    displayImage: calendar1,
+    images: [calendar1, calendar],
+    deployedLink: "https://bibekamatya.github.io/bs-ad-calendar/",
+  },
+  {
+    showDetails: true,
     title: "Smart Account",
     type: "Next.js Full-Stack App | Business Management",
     description:
@@ -271,57 +310,55 @@ export const PROJECTS_DATA = [
         "Comprehensive error handling and audit logging.",
       ],
     },
-    displayImage: smartAccountDisplay,
+    displayImage: saDashboard,
     images: [smartAccountDisplay, smartAccountDashboard, sa2, sa3],
     deployedLink: "https://smart-acc.vercel.app/",
   },
   {
     showDetails: true,
-    title: "RoomFinder",
-    type: "MERN App | Self-learning project",
+    title: "Xpenza",
+    type: "Next.js Full-Stack App | Expense Tracker",
     description:
-      "A MERN stack app for finding and listing rooms with advanced search features.",
+      "A modern expense tracking application with analytics, budget management, and data export features.",
     overview:
-      "RoomFinder is a MERN stack application built to help users find rooms for rent and list their own properties. It features user authentication, search and filtering options, map integration, and a responsive design, providing a smooth user experience across devices.",
+      "Full-stack expense tracker built with Next.js 15, React 19, and MongoDB. Features Google OAuth authentication, real-time analytics, budget tracking, and PWA support for offline access.",
     coreFeatures: [
-      "Implemented search and filtering capabilities for efficient room discovery.",
-      "User authentication and role-based navigation for secure access and management.",
-      "Integration with MongoDB for efficient data storage and retrieval.",
-      "Responsive design using React.js and Tailwind CSS for a seamless experience on all devices.",
+      "Transaction Management - Add, edit, delete income/expense with categories.",
+      "Smart Filtering - Real-time search with date range and category filters.",
+      "Budget Tracking - Set limits and get alerts when approaching budget.",
+      "Reports & Analytics - Visual insights with charts and trend analysis.",
+      "Data Export - Export transactions as CSV or PDF.",
     ],
     advancedFeatures: [
-      "Functionality for users to edit or delete their posts.",
-      "Enhanced search with criteria such as price range, location, tenant type, and room types.",
-      "Map integration for visualizing room locations.",
-      "Notification system for important alerts.",
-      "User profile management for updating personal and contact information.",
-      "Lightbox feature for full-screen image viewing.",
+      "Google OAuth authentication with NextAuth.js.",
+      "Real-time updates with optimistic rendering.",
+      "Bulk operations (select and delete multiple transactions).",
+      "PWA support with offline functionality.",
+      "Responsive design with dark theme.",
     ],
     technologies: [
-      "React",
-      "Redux",
-      "Redux Thunk",
-      "Tailwind CSS",
+      "Next.js 15",
+      "React 19",
       "TypeScript",
-      "Express",
       "MongoDB",
-      "Node.js",
-      "JavaScript",
-      "RESTful APIs",
-      "JWT Authentication",
-      "Google Maps API",
+      "NextAuth.js",
+      "Tailwind CSS",
+      "Recharts",
+      "Framer Motion",
+      "jsPDF",
     ],
     development: {
-      tools: ["Visual Studio Code", "Postman", "Git", "Webpack"],
+      tools: ["Visual Studio Code", "MongoDB Atlas", "Vercel", "Git"],
       practices: [
-        "Adopted best practices for code quality and maintainability.",
-        "Used Git for version control and collaboration.",
-        "Applied continuous integration and deployment with GitHub Actions.",
+        "Server Actions for type-safe API operations.",
+        "Zod validation for data integrity.",
+        "Optimistic UI updates for better UX.",
+        "PWA configuration for mobile experience.",
       ],
     },
-    displayImage: rfDisplay,
-    images: [rfHome, rfDashboard, rfDetails, rfList],
-    deployedLink: "https://roomfinder.vercel.app/",
+    displayImage: xpenza,
+    images: [xpenza, xpenza1],
+    deployedLink: "https://xpenza-web.vercel.app/",
   },
   {
     showDetails: true,
@@ -374,25 +411,6 @@ export const PROJECTS_DATA = [
     images: [healt1],
   },
   {
-    showDetails: false,
-    title: "XoopCall",
-    type: "React App",
-    description: "React application for communicate with users.",
-    overview:
-      "XoopCall is a React application developed to communicate with users. It allows real-time updates, and includes features for advanced user and message filtering and search.",
-    coreFeatures: [
-      "Efficient call scheduling and tracking system with a clean and intuitive UI.",
-    ],
-    advancedFeatures: [
-      "Real-time call updates and notifications.",
-      "Advanced call filtering and search options.",
-      "User profile and call history management.",
-    ],
-    technologies: ["React", "Redux", "Tailwind CSS"],
-    displayImage: xoopcall,
-    images: [xoopcall],
-  },
-  {
     showDetails: true,
     title: "Merriment Travels",
     type: "React App",
@@ -418,27 +436,6 @@ export const PROJECTS_DATA = [
       merrimentBlogDetails,
     ],
     deployedLink: "https://merrimenttravels.com/",
-  },
-  {
-    showDetails: true,
-    title: "OutInvoice",
-    type: "React App",
-    description:
-      "A React app for managing invoices and billing with customizable templates.",
-    overview:
-      "OutInvoice simplifies the invoice and billing process by offering customizable templates, real-time invoice tracking, and integration with payment gateways. The app is designed to improve efficiency in managing business transactions.",
-    coreFeatures: [
-      "Simplified invoice creation and management.",
-      "Real-time tracking of billing statuses.",
-    ],
-    advancedFeatures: [
-      "Automated invoice generation based on user input.",
-      "Customizable templates for invoicing.",
-      "Integration with third-party payment gateways.",
-    ],
-    technologies: ["React", "Bootstrap 5", "Redux"],
-    displayImage: outinvoice1,
-    images: [outinvoice1, outinvoice2],
   },
 ];
 

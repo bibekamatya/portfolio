@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <div className="relative">
       <Header header="Skills & Technologies" />
-      
+
       <div className="space-y-12">
         {SKILLS_DATA.map((category, idx) => (
           <motion.div
@@ -40,7 +40,10 @@ const Skills = () => {
                   className="group relative"
                 >
                   <div className="flex items-center gap-2 px-5 py-3 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-brand-500 dark:hover:border-brand-500 rounded-full transition-all duration-200 cursor-default shadow-sm hover:shadow-md backdrop-blur-sm">
-                    <Icon icon={item.icon} className="w-4 h-4 text-brand-600 dark:text-brand-400" />
+                    <Icon
+                      icon={item.icon}
+                      className="w-4 h-4 text-brand-600 dark:text-brand-400"
+                    />
                     <span className="text-sm font-semibold text-gray-900 dark:text-white">
                       {item.title}
                     </span>
