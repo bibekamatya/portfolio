@@ -67,26 +67,26 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 Let's work together
               </h3>
-              <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                 Have a project in mind? Let's discuss how we can work together
                 to bring your ideas to life.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4">
               {CONTACT_DETAILS.map(({ icon, title, content }) => (
-                <div key={title} className="flex items-start gap-4 group">
-                  <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center bg-brand-600 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                    <Icon icon={icon} className="h-6 w-6 text-white" />
+                <div key={title} className="flex items-start gap-3 group">
+                  <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center bg-brand-600 rounded-xl group-hover:scale-110 transition-transform duration-300">
+                    <Icon icon={icon} className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">
+                    <h4 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-0.5">
                       {title}
                     </h4>
-                    <p className="text-lg font-medium text-gray-900 dark:text-white">
+                    <p className="text-sm font-medium text-gray-900 dark:text-white">
                       {content}
                     </p>
                   </div>
@@ -100,62 +100,47 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white dark:bg-white/5 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-white/10 backdrop-blur-sm"
+            className="bg-white dark:bg-white/5 p-6 rounded-2xl shadow-xl border border-gray-200 dark:border-white/10 backdrop-blur-sm"
           >
             <form id="contactForm" onSubmit={handleSubmit}>
-              <div className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="sr-only">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    autoComplete="given-name"
-                    placeholder="Your name"
-                    className="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="sr-only">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    autoComplete="email"
-                    placeholder="Your email address"
-                    className="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="sr-only">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Tell me about your project..."
-                    rows={5}
-                    className="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 py-3 px-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all resize-none"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
-                </div>
+              <div className="space-y-3">
+                <input
+                  type="text"
+                  id="name"
+                  autoComplete="given-name"
+                  placeholder="Your name"
+                  className="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 py-2.5 px-4 text-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="email"
+                  id="email"
+                  autoComplete="email"
+                  placeholder="Your email address"
+                  className="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 py-2.5 px-4 text-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Tell me about your project..."
+                  rows={4}
+                  className="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 py-2.5 px-4 text-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all resize-none"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
               </div>
-              <div className="mt-6">
+              <div className="mt-4">
                 <button
                   type="submit"
-                  className="w-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                  className="w-full bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                   disabled={status === "loading"}
                 >
                   {status === "loading" ? "Sending..." : "Send Message"}

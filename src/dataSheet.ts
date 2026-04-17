@@ -6,26 +6,14 @@ import calendar from "./assets/calendar.png";
 import xpenza from "./assets/xpenza.png";
 import xpenza1 from "./assets/xpenza1.png";
 
-import healt1 from "./assets/health1.png";
-
-import eventForm from "./assets/event-form.png";
-import eventDashboard from "./assets/event-dashboard.png";
-import eventDisplay from "./assets/event-home-display.png";
-import eventHome from "./assets/event-home.png";
-import eventCategoryWise from "./assets/event-category-wise.png";
-import eventDetails from "./assets/event-details.png";
+import resufy1 from "./assets/r1.png";
+import resufy2 from "./assets/r2.png";
 
 import smartAccountDisplay from "./assets/sa-home.png";
 import smartAccountDashboard from "./assets/sa1.png";
 import saDashboard from "./assets/sa-dashboard.png";
 import sa2 from "./assets/sa2.png";
 import sa3 from "./assets/sa3.png";
-
-import merrimentDisplay from "./assets/merriment-display.png";
-import merrimentHome from "./assets/merriment-home.png";
-import merrimentPlaceDetail from "./assets/merriment-place-detail.png";
-import merrimentBlogs from "./assets/merriment-blogs.png";
-import merrimentBlogDetails from "./assets/merriment-blog-details.png";
 
 import Hero from "./components/landingPage/hero";
 import Experiences from "./components/landingPage/experiences";
@@ -45,116 +33,71 @@ export const EXPERIENCES_DATA = [
   {
     role: "Frontend Developer",
     company: "Clove.IT Pvt. Ltd",
-    location: "Biratnagar, Nepal",
-    duration: "Tasks Based, 2025 - PRESENT",
+    location: "Nepal — Remote",
+    duration: "2025 – Present | Contract",
     details: [
-      "Built and maintained React.js and Next.js applications for business clients.",
-      "Improved legacy UI components for better reusability.",
-      "Integrated REST APIs and managed state using Redux Toolkit.",
-      "Reviewed code and optimized performance to reduce load times.",
+      "Worked on refactoring legacy React codebase into modular, reusable components.",
+      "Implemented lazy loading and dynamic imports to improve initial page load performance.",
+      "Applied memoization and component-level optimizations to reduce unnecessary re-renders.",
+      "Participated in code reviews and helped maintain frontend code quality standards.",
     ],
   },
   {
     role: "Frontend Developer",
     company: "AppX Technologies Pvt. Ltd",
-    location: "Nepal",
-    duration: "Part time, Tasks based, 2024",
+    location: "Nepal — Remote",
+    duration: "2024 | Part-time / Contract",
     details: [
-      "Built UI features and custom components using React.js.",
-      "Worked with design team to improve user experience.",
-      "Fixed bugs and improved responsive layouts.",
+      "Built and delivered React UI features and bug fixes under client deadlines.",
+      "Developed task-based frontend components for client applications.",
+      "Improved user experience through UI refinements and responsive design adjustments.",
     ],
   },
   {
     role: "Frontend Developer",
     company: "LightBulb Technology Pvt. Ltd",
-    location: "Biratnagar, Nepal",
-    duration: "2022 - 2024",
+    location: "Nepal | Hybrid",
+    duration: "Sep 2022 – 2024",
     details: [
-      "Learned React.js and TypeScript while building dashboards.",
-      "Worked with designers and backend teams on UI features.",
-      "Improved performance using lazy loading and optimization.",
-      "Followed best practices for clean code.",
+      "Contributed to frontend development of analytics dashboards used by internal teams.",
+      "Integrated REST APIs using Redux Toolkit for state management and data handling.",
+      "Worked on reusable components and code-splitting to improve frontend scalability.",
+      "Collaborated on UI design decisions for dashboard applications.",
     ],
   },
   {
-    role: "Jr. Frontend Developer",
+    role: "Junior Frontend Developer",
     company: "CodAvatar Tech Pvt. Ltd",
-    location: "Kathmandu, Nepal",
-    duration: "June 2022 - Sep 2022",
+    location: "Nepal",
+    duration: "Jun 2022 – Sep 2022",
     details: [
-      "Learned React.js basics while maintaining web applications.",
-      "Helped senior developers with feature implementation.",
-      "Gained experience in frontend development.",
+      "Built reusable React components under senior developer guidance.",
+      "Contributed to API integration and frontend feature development.",
+      "Worked with Git-based workflows, including branching, pull requests, and collaborative development practices.",
     ],
   },
   {
-    role: "Retail Support Officer",
-    company: "WorldLink Communications Pvt. Ltd",
-    location: "Itahari, Nepal",
-    duration: "Sep 2019 - Feb 2020",
+    role: "Technical Support & Early Career",
+    company: "WorldLink Communications & Others",
+    location: "Nepal",
+    duration: "2017 – 2022",
     details: [
-      "Provided technical support to users.",
-      "Resolved service-related inquiries and issues.",
-      "Assisted in the installation and configuration of network equipment.",
-      "Guided customers on network usage and maintenance.",
-    ],
-  },
-  {
-    role: "Frontend Developer",
-    company: "Zeftware Solutions Pvt. Ltd",
-    location: "Biratnagar, Nepal",
-    duration: "May 2018 - Jun 2019",
-    details: [
-      "Developed static websites.",
-      "Implemented UI/UX designs.",
-      "Collaborated with designers to translate visual concepts into code.",
-    ],
-  },
-  {
-    role: "Technical Support Officer",
-    company: "Zeftware Solutions Pvt. Ltd",
-    location: "Biratnagar, Nepal",
-    duration: "Oct 2017 - Mar 2018",
-    details: [
-      "Provided technical assistance to users.",
-      "Diagnosed and resolved software-related issues.",
-      "Supported end-users with software installation and configuration.",
-      "Delivered training and guidance to users.",
+      "Provided technical support and customer-facing troubleshooting.",
+      "Developed strong problem-solving, communication, and analytical skills.",
+      "Transitioned into software development through hands-on learning and practice.",
     ],
   },
 ];
 
 export const EDUCATION_DATA = [
   {
-    degree: "Bachelors Degree",
-    field: "B.SC.CSIT",
-    institution: "Himalaya Darshan College",
-    address: "Biratnagar, Morang, Nepal",
+    degree: "B.Sc. in Computer Science and Information Technology",
+    field: "CSIT",
+    institution: "Tribhuvan University",
+    address: "Nepal",
     board: "TU",
     year: 2022,
-    percentage: "63%",
     icon: "graduationCap",
-  },
-  {
-    degree: "High School",
-    field: "Science",
-    institution: "Kanchanjunga Higher Secondary School",
-    address: "Biratnagar, Morang, Nepal",
-    board: "HSEB",
-    year: 2013,
-    percentage: "62%",
-    icon: "school",
-  },
-  {
-    degree: "SLC",
-    field: "",
-    institution: "Shree Janta Higher Secondary School",
-    address: "Deaury, Udayapur, Nepal",
-    board: "Nepal Education Board",
-    year: 2010,
-    percentage: "56%",
-    icon: "university",
   },
 ];
 
@@ -163,39 +106,57 @@ export const SKILLS_DATA = [
     title: "Frontend",
     icon: "code",
     items: [
-      { title: "HTML", icon: "html" },
-      { title: "CSS", icon: "css" },
-      { title: "JavaScript (ES6+)", icon: "js" },
       { title: "React.js", icon: "react" },
+      { title: "Next.js", icon: "react" },
       { title: "TypeScript", icon: "ts" },
-      { title: "Bootstrap", icon: "bootstrap" },
+      { title: "JavaScript (ES6+)", icon: "js" },
+      { title: "HTML5", icon: "html" },
+      { title: "CSS3", icon: "css" },
       { title: "Tailwind CSS", icon: "tailwind" },
       { title: "MUI", icon: "mui" },
-      { title: "ANT-D", icon: "antd" },
+      { title: "Ant Design", icon: "antd" },
     ],
   },
   {
-    title: "Tools/Version Control",
-    icon: "toolbox",
+    title: "State Management",
+    icon: "redux",
     items: [
-      { title: "Git", icon: "git" },
-      { title: "Vercel", icon: "vercel" },
-      { title: "Postman", icon: "postman" },
-      { title: "Jest", icon: "jest" },
-      { title: "Thunder Client", icon: "toolbox" },
+      { title: "Redux", icon: "redux" },
+      { title: "Redux Toolkit", icon: "redux" },
+      { title: "Async Thunks", icon: "redux" },
     ],
   },
   {
-    title: "Frameworks/Libraries",
+    title: "Backend & APIs",
     icon: "setting",
     items: [
-      { title: "Next.js", icon: "react" },
-      { title: "React.js", icon: "react" },
-      { title: "MERN", icon: "nodejs" },
-      { title: "Redux", icon: "redux" },
-      { title: "Redux Thunk", icon: "redux" },
-      { title: "ESLint/Prettier", icon: "eslint" },
+      { title: "REST APIs", icon: "toolbox" },
+      { title: "Node.js", icon: "nodejs" },
+      { title: "Express.js", icon: "nodejs" },
+      { title: "MongoDB", icon: "nodejs" },
       { title: "GraphQL", icon: "graphql" },
+    ],
+  },
+  {
+    title: "Performance Optimization",
+    icon: "bulb",
+    items: [
+      { title: "Code Splitting", icon: "bulb" },
+      { title: "Lazy Loading", icon: "bulb" },
+      { title: "Memoization", icon: "bulb" },
+      { title: "Dynamic Imports", icon: "bulb" },
+      { title: "Lighthouse Optimization", icon: "bulb" },
+    ],
+  },
+  {
+    title: "Tools & Workflow",
+    icon: "toolbox",
+    items: [
+      { title: "Git / GitHub", icon: "git" },
+      { title: "Vercel", icon: "vercel" },
+      { title: "Postman", icon: "postman" },
+      { title: "Agile / Scrum", icon: "peopleArrow" },
+      { title: "ESLint / Prettier", icon: "eslint" },
     ],
   },
   {
@@ -204,18 +165,9 @@ export const SKILLS_DATA = [
     items: [
       { title: "Problem-solving", icon: "bulb" },
       { title: "Teamwork", icon: "peopleArrow" },
-      { title: "Time management", icon: "clock" },
-      { title: "Collaboration", icon: "peopleArrow" },
+      { title: "Time Management", icon: "clock" },
       { title: "Adaptability", icon: "bulb" },
-    ],
-  },
-  {
-    title: "Other",
-    icon: "bulb",
-    items: [
-      { title: "Networking", icon: "networking" },
-      { title: "Graphic Designing", icon: "palette" },
-      { title: "Computer Hardware & Software", icon: "computer" },
+      { title: "Communication", icon: "peopleArrow" },
     ],
   },
 ];
@@ -362,88 +314,100 @@ export const PROJECTS_DATA = [
   },
   {
     showDetails: true,
-    title: "Event Management System",
-    type: "React App",
+    title: "Resufy",
+    type: "Next.js Full-Stack App | Resume Builder",
     description:
-      "A React application for managing events, including creation and scheduling.",
+      "A resume builder with multiple templates, real-time preview, ATS scoring, and PDF export.",
     overview:
-      "An event management system built with React to facilitate event creation, scheduling, and management. This application allows users to organize events easily while managing roles and notifications, ensuring smooth operation across multiple users.",
+      "Resufy is a full-stack resume builder built with Next.js 15 and MongoDB. It features an ATS scoring system that analyzes resumes and suggests keyword improvements, multi-profile management, and public share links for recruiter access without authentication.",
     coreFeatures: [
-      "Integrated frontend components with state management for real-time updates and dynamic user experiences.",
-      "Implemented secure authentication and user roles for personalized access control.",
+      "Multiple resume templates with real-time preview and PDF export.",
+      "ATS scoring system to analyze resumes and suggest keyword improvements.",
+      "Multi-profile management with configurable section visibility.",
+      "Public share links for recruiter access without authentication.",
+      "Responsive templates using React-PDF for consistent document generation.",
     ],
     advancedFeatures: [
-      "Advanced search and filtering options for events based on date, type, and location.",
-      "Real-time notifications and reminders for upcoming events.",
-      "Integration with calendar services for event synchronization.",
-      "User profile management and event history tracking.",
+      "Google OAuth authentication with NextAuth.js.",
+      "Configurable section visibility per profile.",
+      "Used by early users for resume creation and iteration.",
     ],
     technologies: [
-      "React",
-      "Tailwind CSS",
+      "Next.js 15",
       "TypeScript",
-      "Redux",
-      "Redux Thunk",
+      "MongoDB",
+      "Tailwind CSS",
+      "NextAuth.js",
+      "react-pdf",
     ],
-    displayImage: eventDisplay,
-    images: [
-      eventHome,
-      eventCategoryWise,
-      eventDetails,
-      eventDashboard,
-      eventForm,
-    ],
+    development: {
+      tools: ["Visual Studio Code", "MongoDB Atlas", "Vercel", "Git"],
+      practices: [
+        "Server Actions for type-safe API operations.",
+        "React-PDF for consistent cross-browser document generation.",
+        "Public share links without requiring authentication.",
+      ],
+    },
+    displayImage: resufy1,
+    images: [resufy1, resufy2],
+    deployedLink: "https://resufy.vercel.app/",
+  },
+];
+
+export const OTHER_PROJECTS_DATA = [
+  {
+    title: "Event Management System",
+    type: "React App | Client Project",
+    description: "Event scheduling with role-based login, category search, and real-time UI updates using Redux.",
+    technologies: ["React", "TypeScript", "Redux", "Tailwind CSS"],
     deployedLink: "https://eventmgmt.vercel.app/",
   },
   {
-    showDetails: false,
-    title: "Health Care System",
-    type: "React App",
-    description:
-      "React-based application designed for managing health and medical history records efficiently.",
-    overview:
-      "A user interface created for a healthcare system, focusing on a clean, responsive layout that allows users to access essential healthcare information easily.",
-    coreFeatures: [
-      "Focused on delivering a clean layout and intuitive user experience.",
-    ],
-    technologies: ["React.Js", "Tailwind CSS"],
-    displayImage: healt1,
-    images: [healt1],
+    title: "Merriment Travels",
+    type: "React App | Client Project",
+    description: "Travel booking system with category filtering, admin tools, and responsive design.",
+    technologies: ["React", "TypeScript", "Redux", "Tailwind CSS"],
+    deployedLink: "https://merrimenttravels.com/",
   },
   {
-    showDetails: true,
-    title: "Merriment Travels",
+    title: "Health Care System",
     type: "React App",
-    description:
-      "A React application for managing travel bookings and itineraries.",
-    overview:
-      "Merriment Travels is a travel management application that provides users with an easy way to book and manage their travel itineraries. The app supports real-time notifications, advanced search, and integration with third-party travel platforms.",
-    coreFeatures: [
-      "User-friendly interface for booking management.",
-      "Itinerary tracking with calendar integration.",
-    ],
-    advancedFeatures: [
-      "Real-time notifications for booking updates.",
-      "Advanced filtering for travel options based on user preferences.",
-      "Integration with external booking platforms and services.",
-    ],
-    technologies: ["React", "Tailwind CSS", "Redux"],
-    displayImage: merrimentDisplay,
-    images: [
-      merrimentHome,
-      merrimentPlaceDetail,
-      merrimentBlogs,
-      merrimentBlogDetails,
-    ],
-    deployedLink: "https://merrimenttravels.com/",
+    description: "Healthcare UI for managing health and medical history records with a clean responsive layout.",
+    technologies: ["React", "Tailwind CSS"],
+  },
+  {
+    title: "Smart Account",
+    type: "Next.js App | Business Management",
+    description: "Full-featured business accounting and inventory management system with multi-role support and analytics dashboard.",
+    technologies: ["Next.js", "TypeScript", "Redux Toolkit", "MongoDB", "Tailwind CSS", "JWT"],
+    deployedLink: "https://smart-acc.vercel.app/",
+  },
+  {
+    title: "Room Finder",
+    type: "MERN App | Self-learning",
+    description: "Platform for listing and searching available rooms with multi-role support and analytics dashboard.",
+    technologies: ["Next.js", "TypeScript", "Redux Toolkit", "MongoDB", "Tailwind CSS"],
+    deployedLink: "https://roomfinder.vercel.app/",
+  },
+  {
+    title: "Restropal",
+    type: "HTML/CSS App",
+    description: "Restaurant management application with menu, orders, and table management features.",
+    technologies: ["HTML", "CSS", "Bootstrap"],
+  },
+  {
+    title: "E-Commerce App",
+    type: "React App",
+    description: "E-commerce platform with product listing, cart, and checkout functionality.",
+    technologies: ["React", "TypeScript", "Redux", "Tailwind CSS"],
   },
 ];
 
 export const CONTACT_DETAILS = [
   {
     icon: "address",
-    title: "Address",
-    content: "Gaighat, Udayapur, Nepal",
+    title: "Location",
+    content: "Nepal (Open to Remote)",
   },
   {
     icon: "email",
@@ -454,5 +418,10 @@ export const CONTACT_DETAILS = [
     icon: "phone",
     title: "Phone",
     content: "+977 9816776999",
+  },
+  {
+    icon: "clock",
+    title: "Timezone",
+    content: "GMT+5:45 (Flexible overlap with US/EU)",
   },
 ];

@@ -4,7 +4,7 @@ const socialLinks = [
   { icon: "github", url: "https://github.com/bibekamatya", title: "GitHub" },
   {
     icon: "linkedIn",
-    url: "https://www.linkedin.com/in/hom-narayan-amatya-3a6705377",
+    url: "https://www.linkedin.com/in/hom-narayan-amatya1/",
     title: "LinkedIn",
   },
 ];

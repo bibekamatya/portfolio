@@ -5,6 +5,8 @@ import { PROJECTS_DATA } from "../../dataSheet";
 import { Project } from "../../interfaces";
 import OffCanvas from "../canvas";
 
+import OtherProjects from "./otherProjects";
+
 const Projects = () => {
   const [isHovered, setIsHovered] = useState<number | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -40,7 +42,7 @@ const Projects = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl"></div>
 
       <Header header="Featured Projects" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
         {PROJECTS_DATA.map((project, index) => (
           <motion.div
             key={index}
@@ -164,6 +166,7 @@ const Projects = () => {
         toggleCanvas={toggleCanvas}
         project={selectedProject}
       />
+      <OtherProjects />
     </div>
   );
 };

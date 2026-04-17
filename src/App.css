@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap");
 
 :root {
-  --brand-gradient: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
-  --accent-gradient: linear-gradient(135deg, #fb923c 0%, #fdba74 100%);
+  --brand-gradient: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  --accent-gradient: linear-gradient(135deg, #818cf8 0%, #a5b4fc 100%);
 }
 
 * {
@@ -45,7 +45,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -61,12 +61,12 @@ body {
 }
 
 .vertical-timeline::before {
-  background: linear-gradient(180deg, #f97316 0%, #fb923c 100%) !important;
+  background: linear-gradient(180deg, #6366f1 0%, #818cf8 100%) !important;
 }
 
 .vertical-timeline-element-icon {
   box-shadow:
-    0 0 0 4px #f97316,
+    0 0 0 4px #6366f1,
     inset 0 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 0 4px rgba(0, 0, 0, 0.05) !important;
 }

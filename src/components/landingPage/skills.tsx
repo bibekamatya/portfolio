@@ -8,7 +8,7 @@ const Skills = () => {
     <div className="relative">
       <Header header="Skills & Technologies" />
 
-      <div className="space-y-12">
+      <div className="space-y-8">
         {SKILLS_DATA.map((category, idx) => (
           <motion.div
             key={idx}
@@ -17,18 +17,16 @@ const Skills = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: idx * 0.1 }}
           >
-            {/* Category Title */}
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2 bg-brand-600 rounded-lg">
-                <Icon icon={category.icon} className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-2 mb-3">
+              <div className="p-1.5 bg-brand-600 rounded-lg">
+                <Icon icon={category.icon} className="w-4 h-4 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <h3 className="text-base font-semibold text-gray-900 dark:text-white">
                 {category.title}
               </h3>
             </div>
 
-            {/* Skills as Tags */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               {category.items.map((item, itemIdx) => (
                 <motion.div
                   key={itemIdx}
@@ -37,14 +35,13 @@ const Skills = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: itemIdx * 0.02 }}
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className="group relative"
                 >
-                  <div className="flex items-center gap-2 px-5 py-3 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-brand-500 dark:hover:border-brand-500 rounded-full transition-all duration-200 cursor-default shadow-sm hover:shadow-md backdrop-blur-sm">
+                  <div className="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 hover:border-brand-500 dark:hover:border-brand-500 rounded-full transition-all duration-200 cursor-default shadow-sm hover:shadow-md">
                     <Icon
                       icon={item.icon}
-                      className="w-4 h-4 text-brand-600 dark:text-brand-400"
+                      className="w-3.5 h-3.5 text-brand-600 dark:text-brand-400"
                     />
-                    <span className="text-sm font-semibold text-gray-900 dark:text-white">
+                    <span className="text-xs font-medium text-gray-900 dark:text-white">
                       {item.title}
                     </span>
                   </div>

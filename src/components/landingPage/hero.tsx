@@ -12,7 +12,6 @@ const Hero = () => {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
     <div
@@ -66,7 +65,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
       <motion.div
-        style={{ y, opacity }}
+        style={{ y }}
         className="w-full relative z-10"
         initial={{ scale: 0.95 }}
         animate={{ scale: 1 }}
@@ -86,12 +85,26 @@ const Hero = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
-                  className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4"
+                  className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4"
                 >
                   <span className="text-gray-900 dark:text-white">
                     Hom Narayan Amatya
                   </span>
                 </motion.h1>
+
+                {/* Open to Work badge */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.4, duration: 0.4 }}
+                  className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-full w-fit"
+                >
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  </span>
+                  <span className="text-xs font-medium text-green-700 dark:text-green-400">Open to remote roles</span>
+                </motion.div>
 
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -118,9 +131,9 @@ const Hero = () => {
                   transition={{ delay: 0.7, duration: 0.5 }}
                   className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed"
                 >
-                  3+ years building scalable web applications with React.js,
-                  Next.js, and TypeScript. Specialized in performance
-                  optimization and modern UI/UX.
+                  Frontend developer with 3+ years building dashboards, business
+                  tools, and client UIs using React.js, Next.js, and TypeScript.
+                  Clean code, quick learner, open to remote.
                 </motion.p>
 
                 {/* Location & Tech Stack */}
@@ -150,7 +163,7 @@ const Hero = () => {
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
-                    <span>Biratnagar, Nepal</span>
+                    <span>Nepal (Open to Remote) · GMT+5:45</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {["React", "TypeScript", "Next.js", "Tailwind"].map(
