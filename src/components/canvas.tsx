@@ -75,7 +75,7 @@ const OffCanvas = ({ isOpen, toggleCanvas, project }: OffCanvasProps) => {
       >
         {/* Close button */}
         <button
-          className="absolute top-4 right-4 text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full"
+          className="absolute top-4 right-4 text-gray-700 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full"
           onClick={toggleCanvas}
         >
           <FontAwesomeIcon icon={faTimes} size="lg" />

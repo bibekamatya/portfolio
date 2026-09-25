@@ -35,6 +35,7 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { IconProps } from "../interfaces";
 
 import { ReactComponent as MuiIcon } from "../assets/icon-materialui.svg";
@@ -94,16 +95,17 @@ const iconMap = {
 };
 
 export default function Icon({ icon, className = "" }: IconProps) {
-  // @ts-ignore
-  const iconToRender = iconMap[icon];
+  const iconToRender: unknown = iconMap[icon as keyof typeof iconMap];
 
   // Check if the icon is a FontAwesome icon
   if (
     iconToRender &&
-    typeof iconToRender !== "string" &&
-    (iconToRender as any).icon
+    typeof iconToRender === "object" &&
+    "icon" in (iconToRender as Record<string, unknown>)
   ) {
-    return <FontAwesomeIcon icon={iconToRender} className={className} />;
+    return (
+      <FontAwesomeIcon icon={iconToRender as IconProp} className={className} />
+    );
   }
 
   // Check if the icon is an SVG component

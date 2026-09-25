@@ -17,14 +17,15 @@ const ImageViewer = ({
   onNext: () => void;
   onPrev: () => void;
 }) => {
-  if (!isOpen) return null;
-
   useEffect(() => {
+    if (!isOpen) return;
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") {
         onNext();
       } else if (event.key === "ArrowLeft") {
         onPrev();
+      } else if (event.key === "Escape") {
+        onClose();
       }
     };
 
@@ -35,7 +36,9 @@ const ImageViewer = ({
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [onNext, onPrev]);
+  }, [isOpen, onNext, onPrev, onClose]);
+
+  if (!isOpen) return null;
 
   return (
     <motion.div
@@ -57,14 +60,16 @@ const ImageViewer = ({
           <Icon icon="close" className="w-4 h-4" />
         </button>
         <button
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-themeColor text-2xl"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-2xl bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-brand-600 transition-colors"
           onClick={onPrev}
+          aria-label="Previous image"
         >
           &#10094;
         </button>
         <button
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-themeColor text-2xl"
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-2xl bg-black/50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-brand-600 transition-colors"
           onClick={onNext}
+          aria-label="Next image"
         >
           &#10095;
         </button>

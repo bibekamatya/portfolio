@@ -12,7 +12,7 @@ const socialLinks = [
 const SocialButtons = () => {
   const handleResumeClick = async () => {
     try {
-      const cvModule = await import("../assets/CV-Hom Narayan Amatya.pdf");
+      const cvModule = await import("../assets/hom-narayan-amatya-cv.pdf");
       window.open(cvModule.default, "_blank");
     } catch (error) {
       console.error("Error loading CV:", error);

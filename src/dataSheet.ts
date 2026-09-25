@@ -358,47 +358,67 @@ export const OTHER_PROJECTS_DATA = [
   {
     title: "Event Management System",
     type: "React App | Client Project",
-    description: "Event scheduling with role-based login, category search, and real-time UI updates using Redux.",
+    description:
+      "Event scheduling with role-based login, category search, and real-time UI updates using Redux.",
     technologies: ["React", "TypeScript", "Redux", "Tailwind CSS"],
     deployedLink: "https://eventmgmt.vercel.app/",
   },
   {
     title: "Merriment Travels",
     type: "React App | Client Project",
-    description: "Travel booking system with category filtering, admin tools, and responsive design.",
+    description:
+      "Travel booking system with category filtering, admin tools, and responsive design.",
     technologies: ["React", "TypeScript", "Redux", "Tailwind CSS"],
     deployedLink: "https://merrimenttravels.com/",
   },
   {
     title: "Health Care System",
     type: "React App",
-    description: "Healthcare UI for managing health and medical history records with a clean responsive layout.",
+    description:
+      "Healthcare UI for managing health and medical history records with a clean responsive layout.",
     technologies: ["React", "Tailwind CSS"],
   },
   {
     title: "Smart Account",
     type: "Next.js App | Business Management",
-    description: "Full-featured business accounting and inventory management system with multi-role support and analytics dashboard.",
-    technologies: ["Next.js", "TypeScript", "Redux Toolkit", "MongoDB", "Tailwind CSS", "JWT"],
+    description:
+      "Full-featured business accounting and inventory management system with multi-role support and analytics dashboard.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Redux Toolkit",
+      "MongoDB",
+      "Tailwind CSS",
+      "JWT",
+    ],
     deployedLink: "https://smart-acc.vercel.app/",
   },
   {
     title: "Room Finder",
     type: "MERN App | Self-learning",
-    description: "Platform for listing and searching available rooms with multi-role support and analytics dashboard.",
-    technologies: ["Next.js", "TypeScript", "Redux Toolkit", "MongoDB", "Tailwind CSS"],
+    description:
+      "Platform for listing and searching available rooms with multi-role support and analytics dashboard.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Redux Toolkit",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
     deployedLink: "https://roomfinder.vercel.app/",
   },
   {
     title: "Restropal",
     type: "HTML/CSS App",
-    description: "Restaurant management application with menu, orders, and table management features.",
+    description:
+      "Restaurant management application with menu, orders, and table management features.",
     technologies: ["HTML", "CSS", "Bootstrap"],
   },
   {
     title: "E-Commerce App",
     type: "React App",
-    description: "E-commerce platform with product listing, cart, and checkout functionality.",
+    description:
+      "E-commerce platform with product listing, cart, and checkout functionality.",
     technologies: ["React", "TypeScript", "Redux", "Tailwind CSS"],
   },
 ];

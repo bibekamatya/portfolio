@@ -1,7 +1,10 @@
 {
-  "name": "portfolio",
+  "name": "hom-narayan-portfolio",
+  "description": "Portfolio of Hom Narayan Amatya — Frontend Developer (React, Next.js, TypeScript)",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "author": "Hom Narayan Amatya",
+  "license": "All Rights Reserved",
   "type": "module",
   "scripts": {
     "dev": "vite",
